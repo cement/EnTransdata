@@ -153,23 +153,23 @@
 
 
     <!-- 配置jobtask error HTML 日志输出至单独的日志文件中 -->
-    <appender name="TASK_LOG_INFO_HTML" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <!--日志文件输出的文件名-->
-            <FileNamePattern>${LOG_PATH}/target/classes/static/html/%d{yyyyMMddHHmmss}.html</FileNamePattern>
-            <MaxHistory>30</MaxHistory>
-        </rollingPolicy>
-        <encoder class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">
-            <layout class="ch.qos.logback.classic.html.HTMLLayout">
-                <pattern>%relative%thread%mdc%level%logger%msg</pattern>
-            </layout>
-        </encoder>
+    <!--<appender name="TASK_LOG_INFO_HTML" class="ch.qos.logback.core.rolling.RollingFileAppender">-->
+        <!--<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">-->
+            <!--&lt;!&ndash;日志文件输出的文件名&ndash;&gt;-->
+            <!--<FileNamePattern>${LOG_PATH}/target/classes/static/html/%d{yyyyMMddHHmmss}.html</FileNamePattern>-->
+            <!--<MaxHistory>30</MaxHistory>-->
+        <!--</rollingPolicy>-->
+        <!--<encoder class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">-->
+            <!--<layout class="ch.qos.logback.classic.html.HTMLLayout">-->
+                <!--<pattern>%relative%thread%mdc%level%logger%msg</pattern>-->
+            <!--</layout>-->
+        <!--</encoder>-->
 
-        <!--日志文件最大的大小-->
-        <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
-            <MaxFileSize>10MB</MaxFileSize>
-        </triggeringPolicy>
-    </appender>
+        <!--&lt;!&ndash;日志文件最大的大小&ndash;&gt;-->
+        <!--<triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">-->
+            <!--<MaxFileSize>10MB</MaxFileSize>-->
+        <!--</triggeringPolicy>-->
+    <!--</appender>-->
 
     <appender name="WEBSOCKET" class="com.hnen.transdata.log.WebsocketAppender">
         <!--encoder 默认配置为PatternLayoutEncoder-->

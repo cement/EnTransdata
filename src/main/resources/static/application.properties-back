@@ -4,7 +4,7 @@
 #logging.path=logs
 ##logging.file=spring.log
 
-#logging.config=classpath:config/logback-spring.xml
+#logging.config=classpath:logconfig/logback.xml
 #logging.level.com.hnen.data.mapper=debug
 
 #指定HSM 倒数每次取数的数量,不指定默认为10;
@@ -14,7 +14,7 @@ case.batch.num=10
 #指定HSM 倒数是否运行时启动,默认true
 #hsm.isbootup=false
 #指定CASE 倒数是否运行时启动,默认true
-#case.isbootup=false
+case.isbootup=false
 
 
 #案件源数据库配置
